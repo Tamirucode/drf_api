@@ -66,10 +66,10 @@ ALLOWED_HOSTS = ['localhost', 'djangorest2023-a43ff153f976.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
-    ...,
+    '...',
     'dj_rest_auth.registration',
     'corsheaders',
-    ...,
+    '...',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -97,7 +97,7 @@ INSTALLED_APPS = [
 SITE_ID = 1
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
-    ...,
+    '...',
  
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
