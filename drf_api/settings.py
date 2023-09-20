@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-
 import dj_database_url
 
 
@@ -61,19 +60,21 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 #DEBUG = True
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['localhost', 'djangorest2023.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'djangorest2023-a43ff153f976.herokuapp.com']
 #ALLOWED_HOSTS = ['8000-tamirucode-drfapi-ql79d8ptx19.ws-eu104.gitpod.io']
 
 # Application definition
 
 INSTALLED_APPS = [
-    
+    ...,
+    'dj_rest_auth.registration',
+    'corsheaders',
+    ...,
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-   
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
@@ -86,24 +87,17 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'dj_rest_auth.registration',
-
     'profiles',
     'posts',
     'comments',
     'likes',
     'followers',
-
-    ...
-    'dj_rest_auth.registration',
-    'corsheaders',
-    ...
+    
 ]
-
 SITE_ID = 1
-
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
-     ...
+    ...,
  
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
